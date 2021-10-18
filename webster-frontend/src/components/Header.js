@@ -32,13 +32,14 @@ function Header({ backButton }) {
             ) : (
                 <div>
                     <IconButton
+                        className="header__icon"
                         id="basic-button"
                         aria-controls="basic-menu"
                         aria-haspopup="true"
                         aria-expanded={open ? 'true' : undefined}
                         onClick={handleClick}
                     > 
-                        <MenuIcon fontSize="large" className="header__icon"/>
+                        <MenuIcon fontSize="large"/>
                     </IconButton>
                     <Menu
                         id="basic-menu"
@@ -65,8 +66,8 @@ function Header({ backButton }) {
             </Link> */}
 
             <Link to="/tinderCards">
-                <IconButton>
-                    <ForumIcon fontSize="large" className="header__icon"/>
+                <IconButton className="header__icon">
+                    <ForumIcon fontSize="large"/>
                 </IconButton>
             </Link>
         </div>
