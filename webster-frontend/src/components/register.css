@@ -15,6 +15,7 @@
 
 .reg_heading{
 text-align: center;
+margin-top:3vw;
 font-size: 2rem;
 color: lightslategray;
 font-style: italic;
@@ -85,7 +86,19 @@ input[type=text], select, textarea{
       flex: 1;
      
       padding: 20px;
-      
     
-
   }
+
+  .files{
+    display: none;
+  }
+
+  .file{
+    cursor: pointer;
+  }
+
+  #output{
+    width: 200;
+  }
+
+  
