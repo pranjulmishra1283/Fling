@@ -24,6 +24,10 @@ function Register() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    var loadFile = function(event){
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
     return (
         <div className="reg" >
             <div className="reg_header">
@@ -34,121 +38,127 @@ function Register() {
             <div className="reg_heading">
                 <h3>CREATE ACCOUNT</h3>
             </div>
-<div className="content">
-            <div className="form">
-                <form onSubmit={handleSubmit}>
-                    <div className="row">
-                        <div className="col-25">
+            <div className="content">
 
-                            <label for="name">Name </label>
+            
+                <div className="form">
+                    <h2>Profile Details</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className="row">
+                            <div className="col-25">
+
+                                <label for="name">Name </label>
+
+                            </div>
+
+                            <div className="col-75">
+                                <input type="text" name="name" onChange={handleChange} required></input>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-25">
+                                <label for="email">Email </label>
+                            </div>
+
+                            <div className="col-75">
+                                <input type="text" name="email" onChange={handleChange} required></input>
+                            </div>
 
                         </div>
 
-                        <div className="col-75">
-                            <input type="text" name="name" onChange={handleChange} required></input>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-25">
-                            <label for="email">Email </label>
-                        </div>
+                        <div className="row">
+                            <div className="col-25">
+                                <label for="birthday">Birthday </label>
 
-                        <div className="col-75">
-                            <input type="text" name="email" onChange={handleChange} required></input>
-                        </div>
+                            </div>
 
-                    </div>
-
-                    <div className="row">
-                        <div className="col-25">
-                            <label for="birthday">Birthday </label>
+                            <div className="col-75">
+                                <input type="date" id="birthday" name="birthday"></input>
+                            </div>
 
                         </div>
+                        <div className="row">
+                            <div className="col-25">
 
-                        <div className="col-75">
-                            <input type="date" id="birthday" name="birthday"></input>
+                                <label for="Gender">Gender</label>
+                            </div>
+                            <div className="col-75">
+                                <select name="gender" id="gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
                         </div>
 
-                    </div>
-                    <div className="row">
-                        <div className="col-25">
+                        <div className="row">
+                            <div className="col-25">
 
-                            <label for="Gender">Gender</label>
+                                <label for="showme">Show me</label>
+                            </div>
+                            <div className="col-75">
+                                <select name="showme" id="showme">
+                                    <option value="Men">Men</option>
+                                    <option value="Women">Women</option>
+                                    <option value="Everyone">Everyone</option>
+                                </select>
+                            </div>
                         </div>
-                        <div className="col-75">
-                            <select name="gender" id="gender">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
-                            </select>
+                        <div className="row">
+                            <div >
+                                <label for="passsword">Password: </label>
+
+                            </div>
+                            <div >
+                                <input type="password" name="password" onChange={handleChange} required></input>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="row">
-                        <div className="col-25">
+                        <div className="row">
+                            <div >
+                                <label for="cpasssword">Confirm Password: </label>
 
-                            <label for="showme">Show me</label>
+                            </div>
+                            <div >
+                                <input type="password" name="password" onChange={handleChange} required></input>
+                            </div>
                         </div>
-                        <div className="col-75">
-                            <select name="showme" id="showme">
-                                <option value="Men">Men</option>
-                                <option value="Women">Women</option>
-                                <option value="Everyone">Everyone</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div >
-                            <label for="passsword">Password: </label>
-
-                        </div>
-                        <div >
-                            <input type="password" name="password" onChange={handleChange} required></input>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div >
-                            <label for="cpasssword">Confirm Password: </label>
-
-                        </div>
-                        <div >
-                            <input type="password" name="password" onChange={handleChange} required></input>
-                        </div>
-                    </div>
 
 
 
+                        
+                    </form>
+                    
+                    
                     <button type="submit" className="signup">SIGNUP</button>
-                </form>
 
-                <div className="ahaa">
-                    <Link to='/login' >
-                        <p>Already have an account?</p>
-                    </Link></div>
-            </div>
-            
-        <div className="prof">
-        <h2>Profile Photo</h2>
-        <div className="container">
-        <div className="wrapper">
-        <label for="files">
-        <input type="file" className="files">
-        </input>
-        <input type="button"></input>
-        </label>
-        
-        </div>
-            
-        </div>
-                
-        </div>
+                    <div className="ahaa">
+                        <Link to='/login' >
+                            <p>Already have an account?</p>
+                        </Link></div>
+                </div>
 
-                
+                <div className="prof">
+                    <h2>Profile Photo</h2>
+                    <div className="container">
+                        <div className="wrapper">
+                            <p><label for="files" className="file">Upload Image</label></p>
+                                <input type="file" className="files" id="files" accept="image/*">
+                                </input>
+                               <p><img id="output"></img></p>
+                            
 
-            
+                        </div>
 
-        </div></div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div></div>
     )
 }
 
