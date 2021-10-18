@@ -1,0 +1,34 @@
+.banner-image {
+  background-image: url('Romantic-Dinner.jpg');
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fp{
+   width: 80%;
+   margin-left: 85px;
+}
+
+.btn{
+  background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+Dennis{
+  margin-top: 2vw;
+}
+
+  
+
+
+ 
+  
