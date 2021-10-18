@@ -5,7 +5,7 @@
 }
 
 .menu-bar{
-    background-image: linear-gradient(-90deg,#aa6731,#040318);
+    background-image: linear-gradient(-90deg,#eee6e0,#040318);
     
 }
 
@@ -70,7 +70,7 @@
 }
 
 .btn {
-    background-image: linear-gradient(-90deg,#ca7530,#040318);
+    background-image: linear-gradient(-90deg,#e7e3df,#040318);
     color: #fff!important;
 }
 
