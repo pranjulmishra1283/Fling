@@ -8,7 +8,7 @@ function Login() {
     const dispatch = useDispatch();
     const history = useHistory(); 
 
-    const initialState = { email: '', password: ''};
+    const initialState = { email: '', password: '' };
 
     const [formData, setFormData] = useState(initialState);
 

@@ -3,6 +3,8 @@ import jwt from 'jsonwebtoken';
 
 import User from '../models/user.js'
 
+var userPreference = "";
+
 export const login = async (req, res) => {
     const { email, password } = req.body;
 
@@ -17,6 +19,7 @@ export const login = async (req, res) => {
 
         const token = jwt.sign({ email: existingUser.email, id: existingUser._id }, 'test', { expiresIn: "1h" });
 
+        userPreference = existingUser.name;
         res.status(200).json({ result: existingUser, token});
     } catch(error) {
         res.status(500).send("something went wrong");
@@ -39,8 +42,11 @@ export const signup = async (req, res) => {
 
         const token = jwt.sign({ email: result.email, id: result._id }, 'test', { expiresIn: "1h" });
 
+        userPreference = result.name;
         res.status(200).json({ result, token });
     } catch(error) {
         res.status(500).send("something went wrong");
     }
 }
+
+export var userPreference;

@@ -4,7 +4,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './components/HomePage.js';
 import Login from './components/Login.js';
 import Register from './components/Register.js';
+import TinderCards from './components/TinderCards.js';
+import Header from './components/Header.js';
 import './App.css';
+
 
 function App() {
   return (
@@ -12,7 +15,8 @@ function App() {
       <Router>
         <Switch>
           <Route path = "/tinderCards">
-            <h1>login successful</h1>
+            <Header />
+            <TinderCards />
           </Route>
           <Route path = "/login">
             <Login />

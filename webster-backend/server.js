@@ -3,6 +3,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 
 import userRoutes from './routes/auth.js'
+import cardRoutes from './routes/cards.js'
 
 // App Config
 const app = express();
@@ -23,6 +24,7 @@ mongoose.connect(connection_url, {
 app.get('/', (req, res) => res.status(200).send('Hello World'));
 
 app.use('/user', userRoutes);
+app.use('/tinder', cardRoutes);
 
 // Listener
 app.listen(port, () => console.log(`listening on localhost: ${port}`));
