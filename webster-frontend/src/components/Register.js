@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import './register.css';
+import FileBase from 'react-file-base64';
 
 import { signup } from '../actions/auth.js';
 
@@ -125,12 +126,12 @@ function Register() {
                         </div>
 
 
-
+ <button type="submit" className="signup">SIGNUP</button>
                         
                     </form>
                     
                     
-                    <button type="submit" className="signup">SIGNUP</button>
+                   
 
                     <div className="ahaa">
                         <Link to='/login' >
