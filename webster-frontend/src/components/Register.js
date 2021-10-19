@@ -25,7 +25,7 @@ function Register() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    var loadFile = function(event){
+    var loadFile = function (event) {
         var image = document.getElementById('output');
         image.src = URL.createObjectURL(event.target.files[0]);
     };
@@ -41,7 +41,7 @@ function Register() {
             </div>
             <div className="content">
 
-            
+
                 <div className="form">
                     <h2>Profile Details</h2>
                     <form onSubmit={handleSubmit}>
@@ -73,65 +73,83 @@ function Register() {
 
                             </div>
 
-                            <div className="col-75">
-                                <input type="date" id="birthday" name="birthday"></input>
+                            <div className="col-75" >
+                                <input style={{marginTop:"13px"}} type="date" id="birthday" name="birthday"></input>
                             </div>
 
                         </div>
                         <div className="row">
                             <div className="col-25">
 
-                                <label for="Gender">Gender</label>
+                                <label for="gender">Gender</label>
                             </div>
                             <div className="col-75">
-                                <select name="gender" id="gender">
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                    <option value="Other">Other</option>
-                                </select>
+                                <label for="gender">Male</label>
+                                <input type="radio" id="Male" name="gender" value="Male"></input>
+                                <label style={{ marginLeft: "15px" }} for="gender">Female</label>
+                                <input type="radio" id="Female" name="gender" value="Female"></input>
+                                <label style={{ marginLeft: "15px" }} for="gender">Other</label>
+                                <input type="radio" id="Other" name="gender" value="Other"></input>
+
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div className="row">
+                            <div className="col-25">
+
+                                <label for="showme">Show Me</label>
+                            </div>
+                            <div className="col-75">
+                                <label for="showme">Male</label>
+                                <input type="radio" id="Men" name="showme" value="Men"></input>
+                                <label style={{ marginLeft: "15px" }} for="showme">Women</label>
+                                <input type="radio" id="Women" name="showme" value="Women"></input>
+                                <label style={{ marginLeft: "15px" }} for="showme">Other</label>
+                                <input type="radio" id="Other" name="showme" value="Other"></input>
+
                             </div>
                         </div>
 
                         <div className="row">
                             <div className="col-25">
-
-                                <label for="showme">Show me</label>
-                            </div>
-                            <div className="col-75">
-                                <select name="showme" id="showme">
-                                    <option value="Men">Men</option>
-                                    <option value="Women">Women</option>
-                                    <option value="Everyone">Everyone</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div >
                                 <label for="passsword">Password: </label>
 
                             </div>
-                            <div >
+                            <div className="col-75">
                                 <input type="password" name="password" onChange={handleChange} required></input>
                             </div>
                         </div>
 
                         <div className="row">
-                            <div >
+                            <div className="col-25">
                                 <label for="cpasssword">Confirm Password: </label>
 
                             </div>
-                            <div >
-                                <input type="password" name="password" onChange={handleChange} required></input>
+                            <div className="col-75">
+                                <input style={{marginTop:"10px"}} type="password" name="password" onChange={handleChange} required></input>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="bio">Bio</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="bio" name="bio" placeholder="Tell the world something about yourself..." style={{height: "100px"}}></textarea>
                             </div>
                         </div>
 
 
- <button type="submit" className="signup">SIGNUP</button>
-                        
+                        <button type="submit" className="signup">SIGNUP</button>
+
                     </form>
-                    
-                    
-                   
+
+
+
 
                     <div className="ahaa">
                         <Link to='/login' >
@@ -139,21 +157,7 @@ function Register() {
                         </Link></div>
                 </div>
 
-                <div className="prof">
-                    <h2>Profile Photo</h2>
-                    <div className="container">
-                        <div className="wrapper">
-                            <p><label for="files" className="file">Upload Image</label></p>
-                                <input type="file" className="files" id="files" accept="image/*">
-                                </input>
-                               <p><img id="output"></img></p>
-                            
-
-                        </div>
-
-                    </div>
-
-                </div>
+                
 
 
 
