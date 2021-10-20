@@ -45,6 +45,20 @@ function Register() {
                 <div className="form">
                     <h2>Profile Details</h2>
                     <form onSubmit={handleSubmit}>
+
+                        
+                    <div class="row">
+                            <div class="col-25">
+                                <label for="profile">Upload Profile Image</label>
+                            </div>
+                            <div class="col-75">
+                            <input  type="file" id="img" name="img" accept="image/*"></input>
+                            <div className = "prof_display">
+                           
+                            </div>
+                            </div>
+                        </div>
+
                         <div className="row">
                             <div className="col-25">
 
@@ -116,7 +130,7 @@ function Register() {
 
                         <div className="row">
                             <div className="col-25">
-                                <label for="passsword">Password: </label>
+                                <label for="passsword">Password </label>
 
                             </div>
                             <div className="col-75">
@@ -126,13 +140,17 @@ function Register() {
 
                         <div className="row">
                             <div className="col-25">
-                                <label for="cpasssword">Confirm Password: </label>
+                                <label for="cpasssword">Confirm Password </label>
+
 
                             </div>
+                            
                             <div className="col-75">
                                 <input style={{marginTop:"10px"}} type="password" name="password" onChange={handleChange} required></input>
                             </div>
                         </div>
+
+                        
 
                         <div class="row">
                             <div class="col-25">
@@ -142,9 +160,10 @@ function Register() {
                                 <textarea id="bio" name="bio" placeholder="Tell the world something about yourself..." style={{height: "100px"}}></textarea>
                             </div>
                         </div>
+                        
+                       
 
-
-                        <button type="submit" className="signup">SIGNUP</button>
+                        <button style={{marginTop:"10px"}} type="submit" className="signup">SIGNUP</button>
 
                     </form>
 
@@ -153,7 +172,7 @@ function Register() {
 
                     <div className="ahaa">
                         <Link to='/login' >
-                            <p>Already have an account?</p>
+                            <p style={{marginTop:"20px"}} >Already have an account?</p>
                         </Link></div>
                 </div>
 
