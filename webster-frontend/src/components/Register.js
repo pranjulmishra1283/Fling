@@ -9,7 +9,7 @@ function Register() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const initialState = { name: '', email: '', password: '' };
+    const initialState = { name: '', email: '', password: '', birthday: '', gender: ''};
 
     const [formData, setFormData] = useState(initialState);
 
@@ -24,7 +24,7 @@ function Register() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    var loadFile = function(event){
+    var loadFile = function (event) {
         var image = document.getElementById('output');
         image.src = URL.createObjectURL(event.target.files[0]);
     };
@@ -40,7 +40,7 @@ function Register() {
             </div>
             <div className="content">
 
-            
+
                 <div className="form">
                     <h2>Profile Details</h2>
                     <form onSubmit={handleSubmit}>
@@ -73,7 +73,7 @@ function Register() {
                             </div>
 
                             <div className="col-75">
-                                <input type="date" id="birthday" name="birthday"></input>
+                                <input type="date" id="birthday" name="birthday" onChange={handleChange}></input>
                             </div>
 
                         </div>
@@ -83,10 +83,10 @@ function Register() {
                                 <label for="Gender">Gender</label>
                             </div>
                             <div className="col-75">
-                                <select name="gender" id="gender">
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                    <option value="Other">Other</option>
+                                <select name="gender" id="gender"  onChange={handleChange}>
+                                    <option value="Male" onChange={handleChange}>Male</option>
+                                    <option value="Female" onChange={handleChange}>Female</option>
+                                    <option value="Other" onChange={handleChange}>Other</option>
                                 </select>
                             </div>
                         </div>
@@ -107,7 +107,6 @@ function Register() {
                         <div className="row">
                             <div >
                                 <label for="passsword">Password: </label>
-
                             </div>
                             <div >
                                 <input type="password" name="password" onChange={handleChange} required></input>
@@ -117,25 +116,22 @@ function Register() {
                         <div className="row">
                             <div >
                                 <label for="cpasssword">Confirm Password: </label>
-
                             </div>
                             <div >
-                                <input type="password" name="password" onChange={handleChange} required></input>
+                                <input type="password" name="password"  required></input>
                             </div>
                         </div>
-
-
-
-                        
+                        <button type="submit" className="signup">SIGNUP</button>
                     </form>
+
+
                     
-                    
-                    <button type="submit" className="signup">SIGNUP</button>
 
                     <div className="ahaa">
                         <Link to='/login' >
                             <p>Already have an account?</p>
-                        </Link></div>
+                        </Link>
+                    </div>
                 </div>
 
                 <div className="prof">
@@ -143,22 +139,14 @@ function Register() {
                     <div className="container">
                         <div className="wrapper">
                             <p><label for="files" className="file">Upload Image</label></p>
-                                <input type="file" className="files" id="files" accept="image/*">
-                                </input>
-                               <p><img id="output"></img></p>
-                            
-
+                            <input type="file" className="files" id="files" accept="image/*">
+                            </input>
+                            <p><img id="output"></img></p>
                         </div>
-
                     </div>
-
                 </div>
-
-
-
-
-
-            </div></div>
+            </div>
+        </div>
     )
 }
 
