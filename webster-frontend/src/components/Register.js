@@ -45,6 +45,20 @@ function Register() {
                 <div className="form">
                     <h2>Profile Details</h2>
                     <form onSubmit={handleSubmit}>
+
+                        
+                    <div class="row">
+                            <div class="col-25">
+                                <label for="profile">Upload Profile Image</label>
+                            </div>
+                            <div class="col-75">
+                            <input  type="file" id="img" name="img" accept="image/*"></input>
+                            <div className = "prof_display">
+                           
+                            </div>
+                            </div>
+                        </div>
+
                         <div className="row">
                             <div className="col-25">
 
@@ -127,6 +141,7 @@ function Register() {
                             <div className="col-25">
                                 <label for="cpasssword">Confirm Password: </label>
                             </div>
+                            
                             <div className="col-75">
                                 <input style={{marginTop:"10px"}} type="password" name="confirmPassword" onChange={handleChange} required></input>
                             </div>
@@ -140,9 +155,10 @@ function Register() {
                                 <textarea id="bio" name="bio" placeholder="Tell us something about yourself..." style={{height: "100px"}} onChange={handleChange}></textarea>
                             </div>
                         </div>
+                        
+                       
 
-
-                        <button type="submit" className="signup">SIGNUP</button>
+                        <button style={{marginTop:"10px"}} type="submit" className="signup">SIGNUP</button>
 
                     </form>
 

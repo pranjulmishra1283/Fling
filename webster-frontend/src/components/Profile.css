@@ -1,0 +1,12 @@
+.prof{
+    background-color:white;
+}
+
+.prof_header{
+    padding: 0.5vw;
+    padding-left: 43vw;
+    border-bottom: 1px solid lightgrey;
+    
+    object-fit: contain;
+    align-content: center;
+}
