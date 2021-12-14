@@ -51,6 +51,7 @@ function Header({ backButton }) {
         setAnchorEl(null);
     };
 
+
     return (
         <div className='header'>
             {backButton ? (
@@ -78,7 +79,9 @@ function Header({ backButton }) {
                         'aria-labelledby': 'basic-button',
                         }}
                     >
-                        <MenuItem onClick={handleClose}><HomeIcon></HomeIcon> News Feed</MenuItem>
+                        <Link to='/feed'>
+                            <MenuItem><HomeIcon></HomeIcon> News Feed</MenuItem>
+                        </Link>  
                         <MenuItem onClick={handleClose}><PersonIcon></PersonIcon> Profile</MenuItem>
                         <MenuItem onClick={logout}><ExitToAppIcon></ExitToAppIcon> Logout</MenuItem>
                     </Menu>

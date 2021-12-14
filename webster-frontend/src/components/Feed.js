@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+import './Feed.css';
 
 function Feed() {
     return (
-        <div>
-            
+        <div className='chaljaabsdk'>
+            <p>please chal jaaa</p>
         </div>
     )
 }
