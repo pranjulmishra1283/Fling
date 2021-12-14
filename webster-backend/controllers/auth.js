@@ -2,6 +2,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 import User from '../models/user.js'
+import Card from '../models/dbCards.js'
 
 var userPreference = "";
 
@@ -13,13 +14,13 @@ export const login = async (req, res) => {
 
         if(!existingUser) return res.status(404).send("user doesn't exist");
 
-        const isPasswordCorrect = await bcrypt.compare(password, existingUser.password);
+        const isPasswordCorrect = await bcrypt.compare(password, existingUser.hashedPassword);
 
         if(!isPasswordCorrect) return res.status(400).send("invalid credentials"); 
 
         const token = jwt.sign({ email: existingUser.email, id: existingUser._id }, 'test', { expiresIn: "1h" });
 
-        userPreference = existingUser.name;
+        userPreference = existingUser.preference;
         res.status(200).json({ result: existingUser, token});
     } catch(error) {
         res.status(500).send("something went wrong");
@@ -27,22 +28,24 @@ export const login = async (req, res) => {
 }
 
 export const signup = async (req, res) => {
-    const { email, name, password } = req.body;
+    const { bio, birthday, confirmPassword, email, gender, name, password, preference } = req.body;
 
     try {
         const existingUser = await User.findOne({ email });
 
         if(existingUser) return res.status(400).send("user already exists");
 
-        // if(password != confirmPassword) return res.status(400).send("passwords don't match");
+        if(password != confirmPassword) return res.status(400).send("passwords don't match");
 
-        const hashedPassword = await bcrypt.hash(password, 12);
+        const hashedPassword = await bcrypt.hash(password, 3);
+        console.log(hashedPassword);
 
-        const result = await User.create({ email, name, password: hashedPassword });
+        const result = await User.create({ bio, birthday, email, gender, name, hashedPassword, preference });
+        // const profile = await Card.create({ name, imgUrl, bio, gender })
 
         const token = jwt.sign({ email: result.email, id: result._id }, 'test', { expiresIn: "1h" });
 
-        userPreference = result.name;
+        userPreference = result.preference;
         res.status(200).json({ result, token });
     } catch(error) {
         res.status(500).send("something went wrong");

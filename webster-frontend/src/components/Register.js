@@ -10,7 +10,7 @@ function Register() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const initialState = { name: '', email: '', password: '' };
+    const initialState = { name: '', email: '', password: '', birthday: '', gender: '', preference: '', confirmPassword: '', bio: ''};
 
     const [formData, setFormData] = useState(initialState);
 
@@ -32,7 +32,6 @@ function Register() {
     return (
         <div className="reg" >
             <div className="reg_header">
-
                 <img className="logo" src="https://images-ext-2.discordapp.net/external/uBTgW5IvHFskkuxkjChJAp3_5XYa8jhnlq_g4VvvZA4/https/i.postimg.cc/bJGynZpg/Pics-Art-10-17-10-24-02.png?width=150&height=83" alt="/"></img>
             </div>
 
@@ -88,7 +87,7 @@ function Register() {
                             </div>
 
                             <div className="col-75" >
-                                <input style={{marginTop:"13px"}} type="date" id="birthday" name="birthday"></input>
+                                <input style={{marginTop:"13px"}} type="date" id="birthday" name="birthday" onChange={handleChange}></input>
                             </div>
 
                         </div>
@@ -99,11 +98,11 @@ function Register() {
                             </div>
                             <div className="col-75">
                                 <label for="gender">Male</label>
-                                <input type="radio" id="Male" name="gender" value="Male"></input>
+                                <input type="radio" id="Male" name="gender" value="Male" onChange={handleChange}></input>
                                 <label style={{ marginLeft: "15px" }} for="gender">Female</label>
-                                <input type="radio" id="Female" name="gender" value="Female"></input>
+                                <input type="radio" id="Female" name="gender" value="Female" onChange={handleChange}></input>
                                 <label style={{ marginLeft: "15px" }} for="gender">Other</label>
-                                <input type="radio" id="Other" name="gender" value="Other"></input>
+                                <input type="radio" id="Other" name="gender" value="Other" onChange={handleChange}></input>
 
 
 
@@ -115,23 +114,22 @@ function Register() {
                         <div className="row">
                             <div className="col-25">
 
-                                <label for="showme">Show Me</label>
+                                <label for="preference">Show Me</label>
                             </div>
                             <div className="col-75">
-                                <label for="showme">Male</label>
-                                <input type="radio" id="Men" name="showme" value="Men"></input>
-                                <label style={{ marginLeft: "15px" }} for="showme">Women</label>
-                                <input type="radio" id="Women" name="showme" value="Women"></input>
-                                <label style={{ marginLeft: "15px" }} for="showme">Other</label>
-                                <input type="radio" id="Other" name="showme" value="Other"></input>
+                                <label for="preference">Male</label>
+                                <input type="radio" id="Men" name="preference" value="Men" onChange={handleChange}></input>
+                                <label style={{ marginLeft: "15px" }} for="preference">Women</label>
+                                <input type="radio" id="Women" name="preference" value="Women" onChange={handleChange}></input>
+                                <label style={{ marginLeft: "15px" }} for="preference">Other</label>
+                                <input type="radio" id="Other" name="preference" value="Other" onChange={handleChange}></input>
 
                             </div>
                         </div>
 
                         <div className="row">
                             <div className="col-25">
-                                <label for="passsword">Password </label>
-
+                                <label for="passsword">Password: </label>
                             </div>
                             <div className="col-75">
                                 <input type="password" name="password" onChange={handleChange} required></input>
@@ -140,24 +138,20 @@ function Register() {
 
                         <div className="row">
                             <div className="col-25">
-                                <label for="cpasssword">Confirm Password </label>
-
-
+                                <label for="cpasssword">Confirm Password: </label>
                             </div>
                             
                             <div className="col-75">
-                                <input style={{marginTop:"10px"}} type="password" name="password" onChange={handleChange} required></input>
+                                <input style={{marginTop:"10px"}} type="password" name="confirmPassword" onChange={handleChange} required></input>
                             </div>
                         </div>
-
-                        
-
+                    
                         <div class="row">
                             <div class="col-25">
                                 <label for="bio">Bio</label>
                             </div>
                             <div class="col-75">
-                                <textarea id="bio" name="bio" placeholder="Tell the world something about yourself..." style={{height: "100px"}}></textarea>
+                                <textarea id="bio" name="bio" placeholder="Tell us something about yourself..." style={{height: "100px"}} onChange={handleChange}></textarea>
                             </div>
                         </div>
                         
@@ -172,8 +166,9 @@ function Register() {
 
                     <div className="ahaa">
                         <Link to='/login' >
-                            <p style={{marginTop:"20px"}} >Already have an account?</p>
-                        </Link></div>
+                            <p>Already have an account?</p>
+                        </Link>
+                    </div>
                 </div>
 
                 
@@ -182,7 +177,8 @@ function Register() {
 
 
 
-            </div></div>
+            </div>
+        </div>
     )
 }
 

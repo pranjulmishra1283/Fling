@@ -6,8 +6,8 @@ import Login from './components/Login.js';
 import Register from './components/Register.js';
 import TinderCards from './components/TinderCards.js';
 import Header from './components/Header.js';
+import Feed from './components/Feed.js';
 import './App.css';
-
 
 function App() {
   return (
@@ -26,6 +26,9 @@ function App() {
           </Route>
           <Route path = "/">
             <HomePage />
+          </Route>
+          <Route path = "/feed">
+            <Feed />
           </Route>
         </Switch>
       </Router>

@@ -23,29 +23,28 @@ function Login() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    console.log(formData);
+
     return (
         <div className="login">
             <Navbar />
             <div className="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
                 <div className="login_form">
-
-                <h3 style={{color: "white", marginLeft: "4rem" , fontSize: "2rem"}}>SIGN IN TO EXPLORE</h3>
-
-                <form style={{height: "350px", width: "300px"}} onSubmit={handleSubmit} className="form ">
-
-                <label for="email"><b>Email</b> </label><input type="text" name="email" onChange={handleChange} required></input>
-                <label for="passsword" ><b>Password</b> </label><input type="password" name="password" onChange={handleChange} required></input>
-
-                <button type="submit" className ="btn btn-secondary" style={{padding: "6px" ,width: "50%" , marginTop:"30px", textAlign: "center", marginRight:"75px"}}>LOGIN</button>
-                <Link to='/register'>
-            <div style={{marginTop: "90px" }}>
-                <p>Don't have an account?</p>
-            </div>
-            </Link>
-            </form>
-            </div>
-            </div>
-
+                
+                    <h3 style={{color: "white", marginLeft: "10rem" , fontSize: "2rem"}}>SIGN IN</h3>
+                
+                    <form style={{height: "350px", width: "300px"}} onSubmit={handleSubmit} className="form ">  
+                    
+                        <label for="email">Email: </label><input type="text" name="email" onChange={handleChange} required></input>
+                        <label for="passsword">Password: </label><input type="password" name="password" onChange={handleChange} required></input>
+                        <button type="submit">LOGIN</button>
+                        <Link to='/register'>
+                            <p>Don't have an account?</p>
+                        </Link>
+                    </form>
+                </div>
+            </div>    
+                  
         </div>
     )
 }
