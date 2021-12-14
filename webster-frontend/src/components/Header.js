@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import './Header.css';
+import React, { useState, useEffect } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -9,10 +8,39 @@ import HomeIcon from '@mui/icons-material/Home';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import ForumIcon from '@mui/icons-material/Forum';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import decode from 'jwt-decode';
+
+import { LOGOUT } from '../constants/actionTypes.js'
+import './Header.css';
 
 function Header({ backButton }) {
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+
     const history = useHistory();
+    const dispatch = useDispatch();
+    const location = useLocation();
+
+    const logout = () => {
+        dispatch({ type: LOGOUT });
+    
+        history.push('/auth');
+    
+        setUser(null);
+    };
+
+    useEffect(() => {
+        const token = user?.token;
+    
+        if (token) {
+            const decodedToken = decode(token);
+    
+            if (decodedToken.exp * 1000 < new Date().getTime()) logout();
+        }
+    
+        setUser(JSON.parse(localStorage.getItem('profile')));
+    }, [location]);
 
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -52,7 +80,7 @@ function Header({ backButton }) {
                     >
                         <MenuItem onClick={handleClose}><HomeIcon></HomeIcon> News Feed</MenuItem>
                         <MenuItem onClick={handleClose}><PersonIcon></PersonIcon> Profile</MenuItem>
-                        <MenuItem onClick={handleClose}><ExitToAppIcon></ExitToAppIcon> Logout</MenuItem>
+                        <MenuItem onClick={logout}><ExitToAppIcon></ExitToAppIcon> Logout</MenuItem>
                     </Menu>
                 </div>    
             )}
