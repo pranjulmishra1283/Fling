@@ -5,7 +5,7 @@ function Navbar() {
         <div classNameName="header">
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
                 <div className="container">
-                    <a className="navbar-brand" href="#"><img src ="https://images-ext-1.discordapp.net/external/uHmdNy-mfoFQQ0nejnf93IoATs6IdcXTznnviRhNN1k/https/i.postimg.cc/SRH3KSBv/Pics-Art-10-18-12-21-30.png?width=150&height=83"></img></a>
+                    <img className="navbar-brand" src ="https://images-ext-1.discordapp.net/external/uHmdNy-mfoFQQ0nejnf93IoATs6IdcXTznnviRhNN1k/https/i.postimg.cc/SRH3KSBv/Pics-Art-10-18-12-21-30.png?width=150&height=83"></img>
                     <button
                         className="navbar-toggler"
                         type="button"

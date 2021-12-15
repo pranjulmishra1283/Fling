@@ -1,6 +1,7 @@
 .banner-image {
   background-image: url('Romantic-Dinner.jpg');
   background-size: cover;
+  object-fit: contain;
 }
 
 a {
