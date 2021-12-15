@@ -1,21 +1,22 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
 import userRoutes from './routes/auth.js'
 import cardRoutes from './routes/cards.js'
 
 // App Config
 const app = express();
-const port = process.env.PORT || 8001;
-const connection_url = "mongodb+srv://admin:SkdF9u7ukwuNpTlc@cluster0.aioft.mongodb.net/websterDB?retryWrites=true&w=majority"
+dotenv.config();
+const port = process.env.PORT;
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
 
 // DB Config
-mongoose.connect(connection_url, {
+mongoose.connect(process.env.CONNECTION_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -27,4 +28,4 @@ app.use('/user', userRoutes);
 app.use('/tinder', cardRoutes);
 
 // Listener
-app.listen(port, () => console.log(`listening on localhost: ${port}`));
+app.listen(port, () => console.log("Successfully Hosted!"));
