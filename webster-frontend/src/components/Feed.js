@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import './Feed.css';
+import PostForm from './PostForm';
 
 
 
@@ -14,10 +15,12 @@ function Feed() {
 
             </div>
 
+            <Post username="lalala" caption="my head hurts" imageUrl="https://miro.medium.com/max/1400/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" />
             <Post />
             <Post />
             <Post />
-            <Post />
+
+            <PostForm />
 
 
 

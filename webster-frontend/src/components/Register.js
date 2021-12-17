@@ -52,9 +52,7 @@ function Register() {
                             </div>
                             <div class="col-75">
                             <input  type="file" id="img" name="img" accept="image/*"></input>
-                            <div className = "prof_display">
-                           
-                            </div>
+                            
                             </div>
                         </div>
 

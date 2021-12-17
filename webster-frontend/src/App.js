@@ -7,6 +7,7 @@ import TinderCards from './components/TinderCards.js';
 import Header from './components/Header.js';
 import Feed from './components/Feed.js';
 import Profile from './components/Profile.js';
+import Test from './components/Test.js';
 import './App.css';
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path = "/profile">
             <Profile />
+          </Route>
+          <Route path = "/test">
+            <Test />
           </Route>
           <Route path = "/">
             <HomePage />
