@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 
 const auth = async (req, res, next) => {
     try {
-        const token = req.headers.Authorization.split(" ")[1];
+        // const token = req.headers.Authorization.split(" ")[1];
 
         let decodedData;
 
@@ -14,6 +14,6 @@ const auth = async (req, res, next) => {
     } catch (error) {
         console.log(error);
     }
-}
+};
 
 export default auth;
