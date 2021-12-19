@@ -4,13 +4,13 @@ import { Link, useHistory } from 'react-router-dom';
 import './register.css';
 import FileBase from 'react-file-base64';
 
-import { signup } from '../actions/auth.js';
+import { signup } from '../../actions/auth.js';
 
 function Register() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const initialState = { name: '', email: '', password: '', birthday: '', gender: '', preference: '', confirmPassword: '', bio: ''};
+    const initialState = { name: '', email: '', password: '', birthday: '', gender: '', img: '', preference: '', confirmPassword: '', bio: ''};
 
     const [formData, setFormData] = useState(initialState);
 
@@ -51,7 +51,7 @@ function Register() {
                                 <label for="profile">Upload Profile Image</label>
                             </div>
                             <div class="col-75">
-                            <input  type="file" id="img" name="img" accept="image/*"></input>
+                            <FileBase type="file" multiple={false} onDone={({ base64 }) => setFormData({ ...formData, img: base64 })} />
                             
                             </div>
                         </div>

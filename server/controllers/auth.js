@@ -28,7 +28,7 @@ export const login = async (req, res) => {
 }
 
 export const signup = async (req, res) => {
-    const { bio, birthday, confirmPassword, email, gender, name, password, preference } = req.body;
+    const { bio, birthday, confirmPassword, email, gender, img, name, password, preference } = req.body;
 
     try {
         const existingUser = await User.findOne({ email });
@@ -40,8 +40,8 @@ export const signup = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 3);
         console.log(hashedPassword);
 
-        const result = await User.create({ bio, birthday, email, gender, name, hashedPassword, preference });
-        // const profile = await Card.create({ name, imgUrl, bio, gender })
+        const result = await User.create({ bio, birthday, email, gender, img, name, hashedPassword, preference });
+        const profile = await Card.create({ name, img });
 
         const token = jwt.sign({ email: result.email, id: result._id }, 'test', { expiresIn: "1h" });
 

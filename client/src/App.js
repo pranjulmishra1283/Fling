@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import HomePage from './components/HomePage.js';
-import Login from './components/Login.js';
-import Register from './components/Register.js';
+import HomePage from './components/Home/HomePage.js';
+import Login from './components/Auth/Login.js';
+import Register from './components/Auth/Register.js';
 import TinderCards from './components/TinderCards.js';
 import Header from './components/Header.js';
-import Feed from './components/Feed.js';
+import Feed from './components/Posts/Feed.js';
 import Profile from './components/Profile.js';
 import Test from './components/Test.js';
 import './App.css';

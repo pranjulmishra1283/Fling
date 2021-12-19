@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 
-import { login } from '../actions/auth.js';
-import Navbar from './Navbar.js';
+import { login } from '../../actions/auth.js';
+import Navbar from '../Navbar.js';
 
 function Login() {
     const dispatch = useDispatch();
