@@ -100,7 +100,7 @@ function Register() {
                                 <label style={{ marginLeft: "15px" }} for="gender">Female</label>
                                 <input type="radio" id="Female" name="gender" value="Female" onChange={handleChange}></input>
                                 <label style={{ marginLeft: "15px" }} for="gender">Non-Binary</label>
-                                <input type="radio" id="Other" name="gender" value="Other" onChange={handleChange}></input>
+                                <input type="radio" id="Other" name="gender" value="Non-Binary" onChange={handleChange}></input>
 
 
 
@@ -120,7 +120,7 @@ function Register() {
                                 <label style={{ marginLeft: "15px" }} for="preference">Women</label>
                                 <input type="radio" id="Women" name="preference" value="Women" onChange={handleChange}></input>
                                 <label style={{ marginLeft: "15px" }} for="preference">Both</label>
-                                <input type="radio" id="Other" name="preference" value="Other" onChange={handleChange}></input>
+                                <input type="radio" id="Other" name="preference" value="Both" onChange={handleChange}></input>
 
                             </div>
                         </div>
