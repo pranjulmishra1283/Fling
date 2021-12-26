@@ -16,19 +16,18 @@ function HomePage() {
                     <div className="fp justify-content-center align-items-center">
                         <div>
             <Link to='/login'>
-                <button className=" btn btn-secondary w-100 d-flex justify-content-center align-items-center">
+                <button className=" btn btn-secondary w-100 d-flex justify-content-center align-items-center" >
                     Login
                 </button>
             </Link>
             </div>
 
-            <br></br>
-            <br></br>
+            
 
             <div className ="Dennis">
             
             <Link to='/register'>
-                <button className="btn btn-secondary w-100 d-flex justify-content-center align-items-center">
+                <button className="btn btn-secondary w-100 d-flex justify-content-center align-items-center" style={{marginTop: "10px"}}>
                     Signup
                 </button>
             </Link>

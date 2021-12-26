@@ -29,16 +29,16 @@ function Login() {
             <div className="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
                 <div className="login_form">
 
-                <h3 style={{color: "white", marginLeft: "4rem" , fontSize: "2rem"}}>SIGN IN TO EXPLORE</h3>
+                <h3 style={{color: "white", marginLeft: "35%" , marginRight:"35%", fontSize: "2rem"}}>SIGN IN </h3>
 
                 <form style={{height: "350px", width: "300px"}} onSubmit={handleSubmit} className="form ">
 
-                <label for="email"><b>Email</b> </label><input type="text" name="email" onChange={handleChange} required></input>
-                <label for="passsword" ><b>Password</b> </label><input type="password" name="password" onChange={handleChange} required></input>
+                <label for="email" style={{marginLeft: "35%" , marginRight:"35%"}}><b>Email</b> </label><input type="text" name="email" onChange={handleChange} required></input>
+                <label for="passsword" style={{marginLeft: "32%" , marginRight:"35%"}}><b>Password</b> </label><input type="password" name="password" onChange={handleChange} required style={{marginLeft: "30px" , marginRight:"20px"}}></input>
 
                 <button type="submit" className ="btn btn-secondary" style={{padding: "6px" ,width: "50%" , marginTop:"30px", textAlign: "center", marginRight:"75px"}}>LOGIN</button>
                 <Link to='/register'>
-            <div style={{marginTop: "90px" }}>
+            <div style={{marginTop: "90px", marginLeft: "40px" , marginRight:"20px"}}>
                 <p>Don't have an account?</p>
             </div>
             </Link>

@@ -3,6 +3,7 @@ import TinderCard from 'react-tinder-card';
 import CloseIcon from '@mui/icons-material/Close';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import IconButton  from '@mui/material/IconButton';
+import { Link } from 'react-router-dom';
 
 import * as api from '../api/index.js';
 import './TinderCards.css';
@@ -31,6 +32,8 @@ function TinderCards() {
 
     return (
         <div className="tinderCards">
+
+           
             <div className="tinderCards__cardContainer">
                 {people.map((person) => (
                     <TinderCard
