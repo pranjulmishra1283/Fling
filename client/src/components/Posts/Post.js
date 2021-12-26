@@ -34,7 +34,7 @@ const Post = ({ post, setCurrentId }) => {
                 <Avatar
                     className='post_avatar'
                     alt='Username'
-                    src=''
+                    src={post.avatar}
                 />
                 <h3>{post.name}</h3>       
                 <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>   

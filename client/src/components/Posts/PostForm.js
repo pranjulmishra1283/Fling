@@ -21,9 +21,9 @@ const PostForm = ({ currentId, setCurrentId }) => {
         e.preventDefault();
 
         if(currentId) {
-            dispatch(updatePost(currentId, { ...postData, name: user?.result?.name }));
+            dispatch(updatePost(currentId, { ...postData, name: user?.result?.name, avatar: user?.result?.img }));
         } else {
-            dispatch(createPost({ ...postData, name: user?.result?.name }));
+            dispatch(createPost({ ...postData, name: user?.result?.name, avatar: user?.result?.img }));
         }
 
         clear();
