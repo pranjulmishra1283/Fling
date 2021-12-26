@@ -28,7 +28,7 @@ function HomePage() {
             
             <Link to='/register'>
                 <button className="btn btn-secondary w-100 d-flex justify-content-center align-items-center" style={{marginTop: "10px"}}>
-                    Signup
+                    Sign Up
                 </button>
             </Link>
             </div>
