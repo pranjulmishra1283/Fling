@@ -20,14 +20,7 @@ const TinderCards = () => {
     return (
         <div className="tinderCards">
             <Card setCurrentId={setCurrentId} />
-            <div className="swipeButtons">
-                <IconButton className="swipeButtons__left">
-                    <CloseIcon fontSize="large" />
-                </IconButton>
-                <IconButton className="swipeButtons__right">
-                    <FavoriteIcon fontSize="large" />
-                </IconButton>
-            </div>
+            
         </div>
     )
 }
