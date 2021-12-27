@@ -19,19 +19,12 @@
 .header_buttons{
 
   display: flex;
-  float: right;
+ 
   margin-right: 20vw;
   margin-left: 62vw;
  
 }
 
-@media screen and (max-width: 600px) {
-    .header_buttons a:not(:first-child) {display: none;}
-    .header_buttons a.icon {
-      float: right;
-      display: block;
-    }
-  }
   
 
 .header_list{
