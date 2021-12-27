@@ -36,8 +36,8 @@ const Post = ({ post, setCurrentId }) => {
                     alt='Username'
                     src={post.avatar}
                 />
-                <h3>{post.name}</h3>       
-                <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>   
+                <h6>{post.name}</h6>       
+                <Typography  variant="body2">{moment(post.createdAt).fromNow()}</Typography>   
                 <div className="postOptions">
                     {(user?.result?._id === post?.creator) && (
                         <Button style={{ color: 'black' }} size="small" onClick={() => setCurrentId(post._id)}>

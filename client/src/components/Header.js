@@ -70,7 +70,8 @@ function Header({ backButton }) {
                             <Link to='/feed'>
                                 <MenuItem><HomeIcon></HomeIcon> News Feed</MenuItem>
                             </Link>
-                            <MenuItem onClick={handleClose}><PersonIcon></PersonIcon> Profile</MenuItem>
+                            <Link to='/profile'>
+                            <MenuItem ><PersonIcon></PersonIcon> Profile</MenuItem></Link>
                             <MenuItem onClick={logout}><ExitToAppIcon></ExitToAppIcon> Logout</MenuItem>
                                 </div>
                             {/* <IconButton
@@ -105,11 +106,7 @@ function Header({ backButton }) {
                 />
             </Link> */}
 
-                    <Link to="/tinderCards">
-                        <IconButton className="header__icon">
-                            <ForumIcon fontSize="large" />
-                        </IconButton>
-                    </Link></div>
+                    </div>
 
             </div>
 

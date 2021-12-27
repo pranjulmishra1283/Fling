@@ -3,10 +3,10 @@
     background-color: white;
     border: 1px solid lightgray;
     /* margin-bottom: 45px;*/
-    margin-left: 40%;
+    margin-left: 50%;
     /* margin-right: 35%; */
     min-width: 300px; 
-    float: right;
+    
     justify-content: right;
     align-items: center;
 }

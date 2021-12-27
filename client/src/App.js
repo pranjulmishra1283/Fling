@@ -16,6 +16,7 @@ function App() {
       <Router>
         <Switch>
           <Route path = "/feed">
+          <Header />
             <Feed />
           </Route>
           <Route path = "/tinderCards">
@@ -29,6 +30,7 @@ function App() {
             <Register />
           </Route>
           <Route path = "/profile">
+          <Header />
             <Profile />
           </Route>
           <Route path = "/test">
