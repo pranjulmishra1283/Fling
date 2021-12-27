@@ -1,8 +1,17 @@
 .feed{
     background-color: #fafafa;
-    
+}
      
-     }
+
+
+
+.postForm{
+    display: flex;
+    float: left;
+   
+   margin-top: 5%;
+   border: 2px solid black;
+}
      
      
 .feed_header {
