@@ -10,7 +10,7 @@ function HomePage() {
             <Navbar />
 
             <div
-                className="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+                className="banner-image w-100 vh-100 d-flex justify-content-center align-items-center" >
                 <div className="content text-center">
                     <h1 className="text-white">A Place Where You Find Your own Shadow.</h1>
                     <div className="fp justify-content-center align-items-center">
