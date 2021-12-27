@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './components/Home/HomePage.js';
 import Login from './components/Auth/Login.js';
 import Register from './components/Auth/Register.js';
-import TinderCards from './components/TinderCards.js';
+import TinderCards from './components/Cards/TinderCards.js';
 import Header from './components/Header.js';
 import Feed from './components/Posts/Feed.js';
 import Profile from './components/Profile.js';
