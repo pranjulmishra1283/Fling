@@ -1,15 +1,17 @@
 .tinderCards{
     background-color: black;
+    height: 642px;
 }
 .card {
     position: relative;
     background-color: #fff;
     width: 600px;
     padding: 20px;
-    max-width: 85vw;
+    max-width:400px;
     height: 60vh;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
+    border: solid 5px white;
+    margin-top: 50px;
+   
     background-size: cover;
     background-position: center;
 }
@@ -17,7 +19,9 @@
 .tinderCards__cardContainer {
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
+    margin-top: 0vh;
+    
+    
 }
 
 .swipe {
@@ -37,7 +41,7 @@
 }
 
 .swipeButtons {
-    margin-top: 480px;  
+    margin-top: 570px;  
     bottom: 10vh;
     display: flex;
     width: 100%;
@@ -57,4 +61,15 @@
 .swipeButtons__right {
     padding: 1vw !important;
     color: #76e2b2 !important;
+    
 }
+
+.bio{
+
+    height: 80px;
+    width: 400px;
+    background-color: white;
+    padding: 10px;
+    
+}
+
