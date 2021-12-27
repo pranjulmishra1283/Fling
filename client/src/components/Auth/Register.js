@@ -95,13 +95,13 @@ function Register() {
                                 <label for="gender">Gender</label>
                             </div>
                             <div className="col-75">
-                                <label for="gender">Male</label>
                                 <input type="radio" id="Male" name="gender" value="Male" onChange={handleChange}></input>
+                                <label for="gender">Male</label>
+                               <input type="radio" id="Female" name="gender" value="Female" onChange={handleChange}></input>
                                 <label style={{ marginLeft: "15px" }} for="gender">Female</label>
-                                <input type="radio" id="Female" name="gender" value="Female" onChange={handleChange}></input>
-                                <label style={{ marginLeft: "15px" }} for="gender">Non-Binary</label>
                                 <input type="radio" id="Other" name="gender" value="Non-Binary" onChange={handleChange}></input>
-
+                                <label style={{ marginLeft: "15px" }} for="gender">Non-Binary</label>
+                                
 
 
                             </div>
@@ -115,12 +115,13 @@ function Register() {
                                 <label for="preference">Show Me</label>
                             </div>
                             <div className="col-75">
-                                <label for="preference">Men</label>
                                 <input type="radio" id="Men" name="preference" value="Men" onChange={handleChange}></input>
-                                <label style={{ marginLeft: "15px" }} for="preference">Women</label>
+                                <label for="preference">Men</label>
                                 <input type="radio" id="Women" name="preference" value="Women" onChange={handleChange}></input>
-                                <label style={{ marginLeft: "15px" }} for="preference">Both</label>
+                                <label style={{ marginLeft: "15px" }} for="preference">Women</label>
                                 <input type="radio" id="Other" name="preference" value="Both" onChange={handleChange}></input>
+                                <label style={{ marginLeft: "15px" }} for="preference">Both</label>
+                                
 
                             </div>
                         </div>

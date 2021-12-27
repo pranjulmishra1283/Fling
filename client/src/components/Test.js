@@ -3,11 +3,9 @@ import './test.css'
 
 function Test() {
     return (
-        
-            <video autoPlay muted loop id='bg'>
-                 <source src="test.mp4" type='video/mp4'></source>
-            </video>
-        
+        <div>
+        <video src="test.mp4" muted loop autoPlay></video>
+        </div>
     )
 }
 
