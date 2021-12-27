@@ -12,7 +12,7 @@ function TinderCards() {
 
     useEffect(() => {
         async function fetchData() {
-            const req = await api.data();
+            const req = await api.getCards();
             
             setPeople(req.data); 
         }

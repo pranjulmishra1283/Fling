@@ -12,7 +12,8 @@ API.interceptors.request.use((req) => {
     return req;
 });
 
-export const data = () => API.get('/tinder/cards');
+export const getCards = () => API.get('/tinder/cards');
+export const likeCard = (id) => API.patch(`/tinder/${id}/likeCard`);
 
 export const fetchPosts = () => API.get('/posts');
 export const createPost = (newPost) => API.post('/posts', newPost);
