@@ -16,6 +16,7 @@ function App() {
       <Router>
         <Switch>
           <Route path = "/feed">
+            <Header />
             <Feed />
           </Route>
           <Route path = "/tinderCards">

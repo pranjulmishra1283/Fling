@@ -5,8 +5,8 @@ export default (cards = [], action) => {
         case FETCH_CARDS:
             return action.payload;
         case LIKE_CARD:
-            return cards.map((card) => (card._id === action.payload._id ? action.payload : card));
+            return [...cards, action.payload];
         default:
             return cards;
     }
-}
+};

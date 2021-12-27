@@ -106,9 +106,9 @@ function Header({ backButton }) {
             </Link> */}
 
                     <Link to="/tinderCards">
-                        <IconButton className="header__icon">
+                        {/* <IconButton className="header__icon">
                             <ForumIcon fontSize="large" />
-                        </IconButton>
+                        </IconButton> */}
                     </Link></div>
 
             </div>

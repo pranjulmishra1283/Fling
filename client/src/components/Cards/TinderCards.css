@@ -1,5 +1,5 @@
 .tinderCards{
-    background-color: black;
+    background-color: lightgray;
     height: 642px;
 }
 .card {
@@ -9,7 +9,7 @@
     padding: 20px;
     max-width:400px;
     height: 60vh;
-    border: solid 5px white;
+    border: solid 10px white;
     margin-top: 50px;
    
     background-size: cover;

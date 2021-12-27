@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import FileBase from 'react-file-base64';
 import { useDispatch, useSelector } from 'react-redux';
 import { createPost, updatePost } from '../../actions/posts';
+import '../Posts/PostForm.css';
 
 const PostForm = ({ currentId, setCurrentId }) => {
     const dispatch = useDispatch();

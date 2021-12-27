@@ -1,32 +1,35 @@
 import React from 'react';
 import TinderCard from 'react-tinder-card';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
+import { likeCard } from '../../actions/cards';
 import './TinderCards.css';
 
 const Card = ({ setCurrentId }) => {
     const cards = useSelector((state) => state.cards);
+    const dispatch = useDispatch();
 
-    const swiped = (direction, nameToDelete) => {
-        console.log("removing " + nameToDelete);
-        //setLastDirection(direction);
-    };
+    // const swiped = (direction, nameToDelete) => {
+    //     if(direction === "right") {
+    //         dispatch(likeCard(person._id));
+    //     }
+    // };
 
     const outOfFrame = (name) => {
         console.log(name + " left the screen");
     };
 
-    console.log(cards);
-
     return (
         <div className="tinderCards__cardContainer">
                 {cards.map((person) => (
                     <TinderCard
+                        key={person._id}
                         setCurrentId={setCurrentId}
                         className="swipe"
                         key={person.name}
                         preventSwipe={["up", "down"]}
-                        onSwipe={(dir) => swiped(dir, person.name)}
+                        //onSwipe={(dir) => {if(dir === "right") dispatch(likeCard(person._id))}}
                         onCardLeftScreen={() => outOfFrame(person.name)}
                     >
                         <div

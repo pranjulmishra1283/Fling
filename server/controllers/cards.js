@@ -1,6 +1,7 @@
 import Card from '../models/dbCards.js'
 import PostMessage from '../models/postMessage.js';
 import { userPreference, cardImg } from './auth.js';
+import mongoose from 'mongoose';
 
 export const postCard = async (req, res) => {
     const dbCard = req.body;
