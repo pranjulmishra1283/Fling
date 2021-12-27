@@ -30,6 +30,7 @@ function App() {
             <Register />
           </Route>
           <Route path = "/profile">
+          <Header />
             <Profile />
           </Route>
           <Route path = "/test">
